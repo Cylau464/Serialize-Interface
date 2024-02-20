@@ -1,0 +1,12 @@
+{
+    "name": "com.cylau464.serializeinterface",
+    "version": "1.0.0",
+    "displayName": "SerializeInterface",
+    "description": "Serialize Interfaces in Inspector",
+    "unity": "2019.3",
+    "unityRelease": "0a1",
+    "author": {
+      "name": "Dmitry Suloev",
+      "email": "cylau464@gmail.com"
+    }
+  }
