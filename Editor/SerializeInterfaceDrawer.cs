@@ -8,6 +8,7 @@ public class SerializeInterfaceDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
+        EditorGUI.BeginProperty(position, label, property);
         SerializeInterfaceAttribute serializedInterface = attribute as SerializeInterfaceAttribute;
         Type serializedType = serializedInterface.SerializedType;
         bool prevEnableState = GUI.enabled;
@@ -37,6 +38,8 @@ public class SerializeInterfaceDrawer : PropertyDrawer
         var controlID = GUIUtility.GetControlID(FocusType.Passive) - 1;
         bool isHovering = position.Contains(Event.current.mousePosition);
         SerializeInterfaceUtility.DrawInterfaceNameLabel(position, prevValue == null || isHovering ? $"({serializedType.Name})" : "*", controlID);
+        
+        EditorGUI.EndProperty();
     }
 
     private Object TryGetInterfaceFromObject(Object targetObject, Type serializedType)
