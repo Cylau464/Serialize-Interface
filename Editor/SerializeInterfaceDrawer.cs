@@ -16,7 +16,7 @@ public class SerializeInterfaceDrawer : PropertyDrawer
 
         if (IsValid(property, serializedType))
         {
-            label.tooltip = "Serialize " + serializedInterface.SerializedType.Name + " interface";
+            //label.tooltip = "Serialize " + serializedInterface.SerializedType.Name + " interface";
             CheckProperty(property, serializedType);
 
             if (position.Contains(Event.current.mousePosition) == true)
